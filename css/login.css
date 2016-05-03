@@ -34,6 +34,7 @@
 #form-login .form-group {
 	padding: 0px 70px;
 	margin-bottom: 15px;
+	position: relative;
 }
 #form-login .form-group .input {
 	width: 100%;
@@ -47,6 +48,7 @@
 	font-size: 1rem;
 	line-height: 1.4;
 	border: 1px solid #ccc;
+	text-indent: 25px;
 }
 #form-login .form-group .btn_sub{
 	color: #fff;
@@ -59,4 +61,10 @@
 	width: 100%;
 	background: #4DBC62;
 	color: #fff;
+}
+#form-login .form-group i {
+	position: absolute;
+	top: 12px;
+	left: 70px;
+
 }
