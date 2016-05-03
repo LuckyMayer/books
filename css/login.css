@@ -4,7 +4,8 @@
 	padding: 8px 20px;
 	background: #0a8dce;
 }
-#form-login {
+#form-login,
+#form-reg {
 	width: 430px;
 	background: #fff;
 	margin: 150px auto;
@@ -16,14 +17,16 @@
 	-moz-border-radius: 5px;
 	padding-bottom: 15px;
 }
-#form-login .form-header {
+#form-login .form-header,
+#form-reg .form-header {
 	text-align: center;
 	padding: 15px 0;
 	background: -webkit-linear-gradient(top,#fdfdfc,#f3f3f3);
 	background: -moz-linear-gradient(top,#fdfdfc,#f3f3f3);
 	margin-bottom: 20px;
 }
-#form-login .form-header p {
+#form-login .form-header p ,
+#form-reg .form-header p{
 	color: #5B5959;
 	font-size: 20px;
 }
@@ -50,21 +53,76 @@
 	border: 1px solid #ccc;
 	text-indent: 25px;
 }
-#form-login .form-group .btn_sub{
+ .form-group .btn_sub{
 	color: #fff;
-	background: #337ab7;
-	border-color: #2e6da4;
+	background: #23b7e5;
 	width: 100%;
+	height: 40px;
 }
-#form-login .form-group a.btn_reg {
+.form-group .btn_sub:hover {
+	background: #19A9D5;
+}
+ .form-group a.btn_reg {
 	display: block;
 	width: 100%;
-	background: #4DBC62;
+	background: #27C24C;
 	color: #fff;
+	height: 40px;
+}
+.form-group a.btn_reg:hover {
+	background: #23AD44;
 }
 #form-login .form-group i {
 	position: absolute;
 	top: 12px;
 	left: 70px;
+}
 
+ .form-group label {
+	display: inline-block;
+	position: absolute;
+	width:20%;
+	height: 40px;
+	line-height: 40px;
+	text-align: right;
+	top: 10px;
+	left:5px;
+}
+
+ .form-group .reg-input {
+	width: 70%;
+	height: 40px;
+	padding: 6px 12px;
+	border-radius: 4px;
+	box-shadow: 0 0 1px rgba(0,0,0,0.075)insert;
+	display: block;
+	font-size: 1.4rem;
+	line-height: 1.4;
+	border: 1px solid #ccc;
+	margin-left: 24%;
+	margin-top: 10px;
+}
+#form-reg .form-group {
+	padding: 0;
+	line-height: 40px;
+	position: relative;
+	overflow: hidden;
+}
+#form-reg .reg-form-group {
+	padding: 0 70px;
+}
+#form-reg input.code {
+	width: 45%;
+	float: right;
+	margin-right:7%; 
+	margin-left: 0;
+
+}
+#form-reg .form-group img.code {
+	display: inline-block;
+	height: 40px;
+	width: 40%;
+	float: left;
+	margin-left: 7%;
+	margin-top: 10px;
 }

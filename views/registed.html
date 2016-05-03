@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta char="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />	
+	<title>图书借阅管理系统——用户注册</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+  	<link rel="stylesheet" href="../css/font-awesome.min.css" type="text/css" />
+  	<link rel="stylesheet" href="../css/simple-line-icons.css" type="text/css" />
+  	<link rel="stylesheet" href="../css/font.css" type="text/css" />
+  	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/login.css">
+	<link rel="stylesheet" type="text/css" href="../css/icons.css">
+	<script type="text/javascript" src="../js/angular.js"></script>	
+</head>
+<body>
+	<div id="login-header">
+	</div>
+	<form name="form-reg" id="form-reg" action="" method="post" class="reg_login">
+		<div class="form-header">
+			<p>新用户用户注册</P>
+		</div>
+		<div class="form-group">
+			<label for="username">用户账号:</label>
+			<input type="text" id="username" autofocus="autofocus" required="required" class="reg-input">
+		</div>
+		<div class="form-group">
+			<label for="password">登录密码:</label>
+			<input type="password" id="password" required class="reg-input">
+		</div>
+		<div class="form-group">
+			<label for="psw-en">确认密码:</label>
+			<input type="password" id="psw-en" class="reg-input">
+		</div>
+		<div class="form-group">
+			<img src="" alt="验证码" class="code">
+			<input type="text" id="code" placeholder="输入验证码" required="required" class="reg-input code">
+		</div>
+		<div class="form-group reg-form-group">
+			<input type="submit" id="regist" value="注册" class="btn btn_sub">
+		</div>
+	</form>
+</body>
+</html>
