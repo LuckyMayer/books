@@ -1,0 +1,30 @@
+div.user-info {
+	overflow: hidden;
+	float: right;
+	margin-right: 12px;
+	position: absolute;
+	top: 15px;
+	right: 0px;
+}
+ul.nav-header {
+	
+}
+ul.nav-header li {
+	float: left;
+	border: none;
+	border-right: 1px solid #fff;
+	padding: 0px 10px;
+	overflow: hidden;
+	height: 20px;
+	line-height: 20px;
+}
+ul.nav-header li span {
+	text-align: center;
+	padding: 2px 4px;
+}
+ul.nav-header li a {
+	color: #fff;
+}
+ul.nav-header li:last-child {
+	border: none;
+}

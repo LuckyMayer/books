@@ -27,7 +27,25 @@ li {
  	vertical-align: middle;
  	transition:font-size 0,2s;
  }
-
+#header {
+	height: 55px;
+	width: 100%;
+	padding: 8px 20px;
+	background: #0a8dce;
+	line-height: 40px;
+	color: #fff;
+}
+#header p {
+	font-size: 20px;
+	font-weight: bold;
+}
+#footer {
+	text-align: center;
+	color: #838283;
+	height: 50px;
+	line-height: 50px;
+	vertical-align: middle;
+}
 .alert {
 	padding: 10px;
 	margin: 10px auto;
