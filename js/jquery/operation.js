@@ -1,12 +1,17 @@
 $(document).ready(function(){
-	$("#content-menu .nav-aside>li").click(function(event) {
+	$("#content-menu .nav-aside p.menu-title").click(function(event) {
 		/* Act on the event */
-		if($(this).find("i").hasClass("fa-angle-right")){
-			$(this).find("ul.ul-child").slideDown("fast");
-			$(this).find("i").removeClass("fa-angle-right").addClass("fa-angle-down");
+		if($(this).parent().find("i").hasClass("fa-angle-right")){
+			$(this).parent().find("ul.ul-child").slideDown("fast");
+			$(this).parent().find("i").removeClass("fa-angle-right").addClass("fa-angle-down");
 		}else{
-			$(this).find("ul.ul-child").slideUp("fast");
-			$(this).find("i").removeClass("fa-angle-down").addClass("fa-angle-right");
+			$(this).parent().find("ul.ul-child").slideUp("fast");
+			$(this).parent().find("i").removeClass("fa-angle-down").addClass("fa-angle-right");
 		}
 	});
+
+	$("ul.ul-child li").click(function(){
+		$(this).parents("ul.nav-aside").find('li').removeClass("selected");
+		$(this).addClass("selected");
+	})
 })

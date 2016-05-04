@@ -1,3 +1,10 @@
+body {
+	background: #fff;
+	position: relative;
+}
+#header {
+	box-shadow: 3px 2px 3px #b5b5b5;
+}
 div.user-info {
 	overflow: hidden;
 	float: right;
@@ -37,8 +44,7 @@ ul.nav-header li:last-child {
 
 #content-menu {
 	float: left;
-	position: fixed;
-	height: 100%;
+	min-height: 843px;
 	width: 225px;
 	background: #f4f4f4;
 	border-right: 1px solid #dbdbdb;
@@ -64,6 +70,10 @@ ul.nav-header li:last-child {
 	border-top: 1px solid #fff;
 	background: #f0f0f0;
 }
+#content-menu .nav-aside li p.menu-title:hover {
+	color:#0a8dce;
+	cursor: pointer;
+}
 #content-menu .nav-aside li ul.ul-child {
 	margin-top: -10px;
 	margin-bottom: 10px;
@@ -71,6 +81,8 @@ ul.nav-header li:last-child {
 #content-menu .nav-aside li ul.ul-child li {
 	padding: 5px 8px 0 8px;
 	background: #fff;
+	vertical-align: middle;
+	line-height: 1.4
 }
 ul.ul-child li a {
 	color: #333;
@@ -82,6 +94,84 @@ ul.ul-child li a {
 #content-menu .nav-aside li ul.ul-child li:hover {
 	background: #0a8dce;
 }
-#content-menu .nav-aside li ul.ul-child li:hover a {
+#content-menu .nav-aside li ul.ul-child li:hover a,
+#content-menu .nav-aside li ul.ul-child  li.selected a {
 	color: #fff;
+}
+#content-menu .nav-aside li ul.ul-child  li.selected {
+	background: #0a8dce;
+
+}
+
+#content-body {
+	margin-left: 225px;
+	overflow: hidden;
+	position: relative;
+	min-height: 870px;
+}
+
+/* 图书查询 */
+#book-query {
+	overflow: hidden;
+	margin-bottom: 15px;
+}
+#book-query {
+	padding: 20px;
+}
+#book-query .query-header {
+	border-bottom: 1px solid #dee5e7;
+
+}
+#book-query .query-header h1 {
+	font-weight: 300;
+	font-size: 24px;
+	color: rgb(88,102,110);
+}
+#book-query .query-header h1 i {
+	font-size: 24px;
+}
+#book-query .query-operation {
+	width: 500px;
+	margin: 150px auto;
+	position: relative;
+}
+#book-query .query-operation #key-sel {
+		height: 35px;
+		max-width: 150px;
+		padding: 5px 10px;
+}
+#book-query .query-operation .query-input {
+	float: left;
+	margin-left: 160px;
+	margin-top: -35px;
+
+}
+#book-query  #keyWord {
+	height: 35px;
+	padding: 5px;
+	display:block;
+	min-width: 248px;
+	border-radius: 4px;
+	border: 1px solid rgb(204,204,204);
+}
+#book-query #query-btn {
+	right: 0px;
+	top: 0px;
+	position: absolute;
+	height: 35px;
+	width: 90px;
+	border-radius: 0;
+	background: #19a9d5;
+	border-color: #189ec8;
+	color: #fff;
+
+}
+#footer {
+	position: absolute;
+	bottom: 50px;
+	width:100%;
+}
+#footer p {
+	display: block;
+	margin: 0 auto;
 }

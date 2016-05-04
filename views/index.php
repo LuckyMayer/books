@@ -3,7 +3,7 @@
 
 ?>
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
@@ -16,8 +16,11 @@
 	<link rel="stylesheet" type="text/css" href="../css/login.css">
 	<link rel="stylesheet" type="text/css" href="../css/main.css">
 	<script type="text/javascript" src="../js/angular.js"></script>
+	<script type="text/javascript" src="../js/angular-route.min.js"></script>
 	<script type="text/javascript" src="../js/jquery/jquery.min.js"></script>
 	<script type="text/javascript" src="../js/jquery/operation.js"></script>
+	<script type="text/javascript" src="../js/angularjs/app.js"></script>
+	<script type="text/javascript" src="../js/angularjs/router.js"></script>
 	<?php
 		if(!isset($_SESSION['username']))
 	{	?>
@@ -44,7 +47,7 @@
 					<p class="menu-title">图书查询</p>
 					<i class=" fa fa-angle-down"></i>
 					<ul class="ul-child">
-						<li class="selected"><a href="#/query.html">图书搜索</a></li>
+						<li class="selected"><a href="#/query">图书搜索</a></li>
 						<li><a href="#/qeury-hot.html">热门图书排行</a></li>
 						<li><a href="#/query-order.html">图书预约</a></li>
 					</ul>
@@ -70,12 +73,15 @@
 			</ul>
 		</div>
 		<div id="content-body">
-			<div ng-view></div>
+			<div ng-view>
+
+			</div>
+			<div id="footer">
+				<p><span>&copy;2016届杭州电子科技大学毕业设计</span></p>
+			</div>
 		</div>
 	</div>
-	<div id="footer">
-		<p><span>&copy;2016届杭州电子科技大学毕业设计</span></p>
-	</div>
+
 </div>
 </body>
 </html>
