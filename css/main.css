@@ -175,3 +175,19 @@ ul.ul-child li a {
 	display: block;
 	margin: 0 auto;
 }
+
+#query-list {
+	background: #fff;
+	border: 1px solid #dbdbdb;
+	border-top: none;
+}
+#query-list li {
+	padding: 8px;
+	/* border-bottom: 1px solid #dbdbdb; */
+	color: #333;
+}
+#query-list li:hover {
+	background: #0a8dce;
+	color: #fff;
+	cursor:pointer;
+}

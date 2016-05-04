@@ -20,6 +20,7 @@
 	<script type="text/javascript" src="../js/jquery/jquery.min.js"></script>
 	<script type="text/javascript" src="../js/jquery/operation.js"></script>
 	<script type="text/javascript" src="../js/angularjs/app.js"></script>
+	<script type="text/javascript" src="../js/controller/queryController.js"></script>
 	<script type="text/javascript" src="../js/angularjs/router.js"></script>
 	<?php
 		if(!isset($_SESSION['username']))

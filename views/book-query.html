@@ -6,15 +6,20 @@
 		</h1>
 	</div>
 	<div class="query-operation">
-		<select class="input-sm form-control w-sm inline v-middle" id="key-sel">
+		<select  class="input-sm form-control w-sm inline v-middle" id="key-sel">
 			<option value="0">--请选择--</option>
 			<option value="1">书名</option>
 			<option value="2">作者</option>
 			<option value="3">出版社</option>
 		</select>
 		<div class="query-input">
-			<input type="text" placeholder="输入关键词进行查找" id="keyWord">
+			<input type="text" placeholder="输入关键词进行查找" id="keyWord" ng-model="Name">
 			<button id="query-btn" class="btn">查 询</button>
+			<ul id="query-list" ng-if="Name">
+				<li name="bookName" ng-repeat="book in books | filter: Name " ng-click="selectBook(book.Name)">
+					{{book.Name}}
+				</li>
+			</ul>
 		</div>
 	</div>
 </div>
