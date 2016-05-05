@@ -18,7 +18,7 @@ $_SESSION['username']=$_POST["username"];
 
 		//echo $_SESSION['username'];
 		?>
-		<script>alert("登录成功");window.location.href="../views/#/query";</script>
+		<script>window.location.href="../views/#/query";</script>
 		<?php
 
 	}

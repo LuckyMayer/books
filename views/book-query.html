@@ -17,9 +17,34 @@
 			<button id="query-btn" class="btn">查 询</button>
 			<ul id="query-list" ng-if="Name">
 				<li name="bookName" ng-repeat="book in books | filter: Name " ng-click="selectBook(book.Name)">
-					{{book.Name}}
+					{{book.Name || book.Autho || book.Publish}}
 				</li>
 			</ul>
 		</div>
+	</div>
+	<div class="dataTables_wrapper form-inline dt-bootstrap no-footer query-result" id="DataTables_Table_1_wrapper">
+		<table class="table table-striped m-b-none dataTable no-footer" id="DataTables_Table_1" style="width: 1678px;">
+			<thead>
+			<th style="width: 300px;" class="sorting_asc" tabindex="0"rowspan="1" colspan="1">书名</th>
+			<th style="width: 300px;" class="sorting_asc" tabindex="0"rowspan="1" colspan="1">作者</th>
+			<th style="width: 300px;" class="sorting_asc" tabindex="0"rowspan="1" colspan="1">出版社</th>
+			<th style="width: 300px;" class="sorting_asc" tabindex="0"rowspan="1" colspan="1">剩余数量</th>
+			</thead>
+			<tbody  id="#pagination">
+				<tr ng-repeat="book in books | filter:range" class="odd" role="row">
+					<td>{{book.bookName}}</td>
+					<td>{{book.bookAuthor}}</td>
+					<td>{{book.bookPublish}}</td>
+					<td>{{book.bookAmount}}</td>
+				</tr>	
+			</tbody>
+		</table>
+<!-- 		<div class="pull-right btn-group">
+<a ng-repeat="page in books  | pageCount:pageSize"
+ng-click="selectPage($index + 1)" class="btn btn-default"
+ng-class="getPageClass($index + 1)">
+{{$index + 1}}
+</a>
+</div> -->
 	</div>
 </div>

@@ -14,4 +14,9 @@ $(document).ready(function(){
 		$(this).parents("ul.nav-aside").find('li').removeClass("selected");
 		$(this).addClass("selected");
 	});
+
+	$("#content-body").on("click","#query-list li",function(){
+		//alert($(this));
+		$(this).hide();
+	})
 })

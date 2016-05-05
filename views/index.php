@@ -18,10 +18,17 @@
 	<script type="text/javascript" src="../js/angular.js"></script>
 	<script type="text/javascript" src="../js/angular-route.min.js"></script>
 	<script type="text/javascript" src="../js/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/jquery/jqPaginator.js"></script>
 	<script type="text/javascript" src="../js/jquery/operation.js"></script>
 	<script type="text/javascript" src="../js/angularjs/app.js"></script>
-	<script type="text/javascript" src="../js/controller/queryController.js"></script>
+
 	<script type="text/javascript" src="../js/angularjs/router.js"></script>
+	<script type="text/javascript" src="../js/filter/pagination.js"></script>
+	<script type="text/javascript" src="../js/jquery/jquery.pagination.js"></script>
+	<script type="text/javascript" src="../js/angularjs/angular-resource.js"></script>
+	<script type="text/javascript" src="../js/angularjs/tm.pagination.js"></script>
+	<script type="text/javascript" src="../js/controller/queryController.js"></script>
+	<script type="text/javascript" src="../js/directives/ui-jq.js"></script>
 	<?php
 		if(!isset($_SESSION['username']))
 	{	?>
@@ -71,12 +78,19 @@
 						<li><a href="#/admin-query">借阅记录</a></li>
 					</ul>
 				</li>
+				<li id="others-module">
+					<p class="menu-title admin">站外链接</p>
+					<i class=" fa fa-angle-down"></i>
+					<ul class="ul-child">
+						<li><a href="#/admin-onshelf">新书上架</a></li>
+						<li><a href="#/admin-offshelf">图书下架</a></li>
+						<li><a href="#/admin-query">借阅记录</a></li>
+					</ul>
+				</li>				
 			</ul>
 		</div>
 		<div id="content-body">
-			<div ng-view>
-
-			</div>
+			<div ng-view></div>
 			<div id="footer">
 				<p><span>&copy;2016届杭州电子科技大学毕业设计</span></p>
 			</div>
@@ -84,5 +98,6 @@
 	</div>
 
 </div>
+
 </body>
 </html>
