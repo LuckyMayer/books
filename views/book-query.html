@@ -7,7 +7,7 @@
 	</div>
 	<div class="query-operation">
 		<select  class="input-sm form-control w-sm inline v-middle" id="key-sel">
-			<option value="0">--请选择--</option>
+			<option value="0">综合搜索</option>
 			<option value="1">书名</option>
 			<option value="2">作者</option>
 			<option value="3">出版社</option>
@@ -31,8 +31,11 @@
 			<th style="width: 300px;" class="sorting_asc" tabindex="0"rowspan="1" colspan="1">剩余数量</th>
 			</thead>
 			<tbody  id="#pagination">
-				<tr ng-repeat="book in Books" class="odd" role="row">
-					<td><a href="/bookdetail/{{book.id}}">{{book.bookName}}</a></td>
+				<div class="dialog" ng-show="dataCounts">
+					<h2>然而，并没有任何数据，请重新查找</h2>
+				</div>
+				<tr ng-repeat="book in Books | orderBy: 'bookName'" class="odd" role="row">
+					<td><a href="/bookdetail/{{book.id}}">《{{book.bookName}}》</a></td>
 					<td>{{book.bookAuthor}}</td>
 					<td>{{book.bookPublish}}</td>
 					<td>{{book.bookAmount}}</td>

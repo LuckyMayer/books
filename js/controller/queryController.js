@@ -1,6 +1,6 @@
 
 pageSize=10;
-app.controller('queryController', ['$scope','$http','$filter', function($scope,$http,$filter){
+app.controller('queryController', ['$scope','$http', function($scope,$http){
 
     $http.get("../php/getBooks.php").success(function(data){
         $scope.books=data;
@@ -29,14 +29,14 @@ app.controller('queryController', ['$scope','$http','$filter', function($scope,$
     });
  
     $scope.queryBooks=function(keyWord){
-     $http({
-            method:'POST',
-            url: '../php/queryBook.php',
-            data: { bookAuthor:"Brad Green" }
-         })
-     .success(function(data){
+            var key=keyWord;
+            $http({
+                method:'POST',
+                url: '../php/queryBook.php',
+                data: {id:keyWord}
+            }).success(function(data){
+        $scope.books=data;
         console.log(data);
-/*        $scope.books=data;
         $scope.selectedPage=1;
 
         $scope.end=pageSize;
@@ -54,14 +54,11 @@ app.controller('queryController', ['$scope','$http','$filter', function($scope,$
             return $scope.selectedPage==page?"btn-primary":"";
         }
 
-        $scope.Books=$scope.books.slice($scope.start,$scope.end);*/
-     })
-     .error(function() {
-                alert("somthing wrong!!");
-            });
-    }
-        
-
+        $scope.Books=$scope.books.slice($scope.start,$scope.end);    
+    }).error(function() {
+       alert("somthing wrong");
+    });
+}
 }]);
 app.filter('cut',function() {
     return function(data) {

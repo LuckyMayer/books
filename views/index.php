@@ -18,7 +18,6 @@
 	<script type="text/javascript" src="../js/angular.js"></script>
 	<script type="text/javascript" src="../js/angular-route.min.js"></script>
 	<script type="text/javascript" src="../js/jquery/jquery.min.js"></script>
-	<script type="text/javascript" src="../js/jquery/jqPaginator.js"></script>
 	<script type="text/javascript" src="../js/jquery/operation.js"></script>
 	<script type="text/javascript" src="../js/angularjs/app.js"></script>
 

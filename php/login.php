@@ -10,17 +10,17 @@ $_SESSION['username']=$_POST["username"];
 <?php 
 	$pdo=new PDO('mysql:dbname=book','root');
 	$username=$_POST["username"];
-	//echo $username;
 	$password=$_POST["password"];
 	$st=$pdo->query("SELECT COUNT(*) FROM users WHERE name='".$username."' AND password='".$password."'");
 	if($st->fetchColumn())
 	{
 
-		//echo $_SESSION['username'];
 		?>
 		<script>window.location.href="../views/#/query";</script>
 		<?php
 
+	}else {
+		echo "<script type='text/javascript'>alert('用户名或者密码错误!!');window.location.href='../views/login.php';</script>";
 	}
 
 ?>
