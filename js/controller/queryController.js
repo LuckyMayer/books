@@ -4,7 +4,8 @@ app.controller('queryController', ['$scope','$http', function($scope,$http){
 
     $http.get("../php/getBooks.php").success(function(data){
         $scope.books=data;
-        console.log(data);
+        if(data=="") $scope.dataCounts=true;
+        else $scope.dataCounts=false;
         $scope.selectedPage=1;
 
         $scope.end=pageSize;
@@ -27,7 +28,8 @@ app.controller('queryController', ['$scope','$http', function($scope,$http){
         alert("somthing wrong!");
     
     });
- 
+    $scope.dataCounts=false;
+
     $scope.queryBooks=function(keyWord){
             var key=keyWord;
             $http({
@@ -35,6 +37,8 @@ app.controller('queryController', ['$scope','$http', function($scope,$http){
                 url: '../php/queryBook.php',
                 data: {id:keyWord}
             }).success(function(data){
+         if(data=="") $scope.dataCounts=true;
+        else $scope.dataCounts=false;
         $scope.books=data;
         console.log(data);
         $scope.selectedPage=1;

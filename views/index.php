@@ -55,8 +55,8 @@
 					<i class=" fa fa-angle-down"></i>
 					<ul class="ul-child">
 						<li class="selected"><a href="#/query">图书搜索</a></li>
-						<li><a href="#/qeury-hot.html">热门图书排行</a></li>
 						<li><a href="#/query-order.html">图书预约</a></li>
+						<li><a href="#/qeury-hot.html">热门图书排行</a></li>
 					</ul>
 				</li>
 				<li id="user-module">

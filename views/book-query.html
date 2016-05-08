@@ -31,9 +31,7 @@
 			<th style="width: 300px;" class="sorting_asc" tabindex="0"rowspan="1" colspan="1">剩余数量</th>
 			</thead>
 			<tbody  id="#pagination">
-				<div class="dialog" ng-show="dataCounts">
-					<h2>然而，并没有任何数据，请重新查找</h2>
-				</div>
+
 				<tr ng-repeat="book in Books | orderBy: 'bookName'" class="odd" role="row">
 					<td><a href="/bookdetail/{{book.id}}">《{{book.bookName}}》</a></td>
 					<td>{{book.bookAuthor}}</td>
@@ -42,6 +40,9 @@
 				</tr>	
 			</tbody>
 		</table>
+		<div class="dialog" ng-show="dataCounts">
+			<h2>然而，并没有任何数据，请重新查找</h2>
+		</div>
 		<div class="pull-right btn-group">
 			<a ng-repeat="page in books | cut" class="btn btn-default" ng-click="getCurrentPage($index)" ng-class="getPageClass($index+1)">
 				{{$index + 1}}

@@ -191,3 +191,11 @@ ul.ul-child li a {
 	color: #fff;
 	cursor:pointer;
 }
+
+.dialog {
+	width: 600px;
+	height: 150px;
+	text-align: center;
+	margin: 140px auto;
+	color: #333;
+}
