@@ -27,9 +27,9 @@
 		<div class="bk-group">
 			<p><span class="list-lb">可借数量: {{bookInfo.bookAmount}} 本</span></p>
 		</div>
-		<div class="bk-group">
+		<div class="bk-group" ng-controller="zanController">
 			<p><span class="list-lb">综合评价:<i class="fa fa-star-o" id="lv_1"></i><i class="fa fa-star-o" id="lv_2"></i><i class="fa fa-star-o" id="lv_3"></i><i class="fa fa-star-o" id="lv_4"></i><i class="fa fa-star-o" id="lv_5"></i></span></p>
-			<p ><span><button class="zan"><i class="icon-like"></i></button class="zan"><button><i class="icon-dislike"></i></button></span></p>
+			<p ><span><button class="zan" ng-click="support(bookInfo.bookID)"><i class="icon-like"></i></button><button class="opp" ng-click="oppose(bookInfo.bookID)"><i class="icon-dislike"></i></button></span></p>
 		</div>
 	</div>
 	<div class="book-comment">

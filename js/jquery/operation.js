@@ -19,4 +19,27 @@ $(document).ready(function(){
 		//alert($(this));
 		$(this).hide();
 	})
+
+	$("#content-body").on("click","p button.zan",function(){
+			$i=$(this).find("i").removeClass('icon-like').addClass("fa fa-thumbs-up");
+			$i.parent().attr("disabled","false");
+			$i.parent().siblings('button').removeAttr('disabled');
+			if($i.parent().siblings('button').find("i").hasClass('fa-thumbs-down')) {
+				$i.parent().siblings('button').find("i").removeClass('fa-thumbs-down').addClass('icon-dislike');
+			}else {
+
+			}			
+
+	})
+
+	$("#content-body").on("click","p button.opp",function(){
+			$i=$(this).find("i").removeClass('icon-dislike').addClass("fa fa-thumbs-down");
+			$i.parent().attr("disabled","false");
+			$i.parent().siblings('button').removeAttr('disabled');
+			if($i.parent().siblings('button').find("i").hasClass('fa-thumbs-up')) {
+				$i.parent().siblings('button').find("i").removeClass('fa-thumbs-up').addClass('icon-like');
+			}else {
+
+			}
+	})
 })
