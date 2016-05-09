@@ -44,4 +44,11 @@ app.controller("zanController",function($scope,$http){
 		else
 			return "fa fa-star-o";
 	}
+});
+
+app.controller("commentController",function($scope,$http){
+	 $scope.subComment=function(bookID,username) {
+	 	console.log(bookID);
+	 	console.log(username);
+	 }
 })

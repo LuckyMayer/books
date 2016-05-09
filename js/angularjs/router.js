@@ -6,6 +6,6 @@ app.config(['$routeProvider',function($routeProvider) {
 	});
 	route.when('/detail/:id',{
 		controller: "detailController",
-		templateUrl: "../views/book-detail.html"
+		templateUrl: "../views/book-detail.php"
 	})
 }])

@@ -204,6 +204,7 @@ ul.ul-child li a {
 /* 书籍详情页面 */
 .book-info {
 	margin-top: 20px;
+	overflow: hidden;
 }
 .bk-group {
 	padding:5px;
@@ -216,8 +217,10 @@ ul.ul-child li a {
 	text-indent: 5px;
 	line-height: 1.4;
 }
+
 .book-info .bk-group {
 	width: 600px;
+	float: left;
 }
 .book-comment .bk-group {
 	border: 1px solid #dbdbdb;
@@ -244,14 +247,17 @@ ul.ul-child li a {
 	padding: 5px;
 	font-size: 15px;
 }
+.book-info i {
+	width: 15px;
+}
 p span.smal {
 	font-size: 8px;
 	color: #333;
 }
-p button.zan{
+p button.zan,
+p button.opp 
+{
 	margin-right: 5px;
+	padding: 3px;
 }
-p button.opp {
 
-	margin-right: 5px;
-}
