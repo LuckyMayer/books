@@ -20,14 +20,11 @@
 	<script type="text/javascript" src="../js/jquery/jquery.min.js"></script>
 	<script type="text/javascript" src="../js/jquery/operation.js"></script>
 	<script type="text/javascript" src="../js/angularjs/app.js"></script>
-
 	<script type="text/javascript" src="../js/angularjs/router.js"></script>
 	<script type="text/javascript" src="../js/filter/pagination.js"></script>
-	<script type="text/javascript" src="../js/jquery/jquery.pagination.js"></script>
 	<script type="text/javascript" src="../js/angularjs/angular-resource.js"></script>
-	<script type="text/javascript" src="../js/angularjs/tm.pagination.js"></script>
 	<script type="text/javascript" src="../js/controller/queryController.js"></script>
-	<script type="text/javascript" src="../js/directives/ui-jq.js"></script>
+	<script type="text/javascript" src="../js/controller/detailController.js"></script>
 	<?php
 		if(!isset($_SESSION['username']))
 	{	?>

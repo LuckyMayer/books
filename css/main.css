@@ -111,23 +111,23 @@ ul.ul-child li a {
 }
 
 /* 图书查询 */
-#book-query {
+#book-query,
+#book-detail{
 	overflow: hidden;
 	margin-bottom: 15px;
-}
-#book-query {
 	padding: 20px;
 }
-#book-query .query-header {
+
+.query-header {
 	border-bottom: 1px solid #dee5e7;
 
 }
-#book-query .query-header h1 {
+.query-header h1 {
 	font-weight: 300;
 	font-size: 24px;
 	color: rgb(88,102,110);
 }
-#book-query .query-header h1 i {
+.query-header h1 i {
 	font-size: 24px;
 }
 #book-query .query-operation {
@@ -198,4 +198,56 @@ ul.ul-child li a {
 	text-align: center;
 	margin: 140px auto;
 	color: #333;
+}
+
+
+/* 书籍详情页面 */
+.book-info {
+	margin-top: 20px;
+}
+.bk-group {
+	padding:5px;
+	border: none;
+	margin: 10px 0;
+	text-indent: 15px;
+}
+.book-group p {
+	word-break: break-word;
+	text-indent: 5px;
+	line-height: 1.4;
+}
+.book-info .bk-group {
+	width: 600px;
+}
+.book-comment .bk-group {
+	border: 1px solid #dbdbdb;
+	padding: 8px;
+	margin-bottom: 5px;
+}
+.book-comment .bk-group p {
+	margin: 0px;
+}
+.book-comment .comment-list {
+	height: 185px;
+	overflow: auto;
+}
+.book-comment .comment-onself {
+	height: 250px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+.comment-onself textarea {
+	width: 100%;
+	height: 157px;
+	resize: none;
+	text-indent: 5px;
+	padding: 5px;
+	font-size: 15px;
+}
+p span.smal {
+	font-size: 8px;
+	color: #333;
+}
+p button.zan {
+	margin-right: 5px;
 }

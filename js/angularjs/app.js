@@ -1,1 +1,1 @@
-var app=angular.module("myApp",["ngRoute","ngResource","tm.pagination"]);
+var app=angular.module("myApp",["ngRoute","ngResource"]);

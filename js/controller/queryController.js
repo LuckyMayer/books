@@ -31,7 +31,6 @@ app.controller('queryController', ['$scope','$http', function($scope,$http){
     $scope.dataCounts=false;
 
     $scope.queryBooks=function(keyWord){
-            var key=keyWord;
             $http({
                 method:'POST',
                 url: '../php/queryBook.php',

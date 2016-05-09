@@ -22,21 +22,23 @@
 </ul> -->
 		</div>
 	</div>
-	<div class="dataTables_wrapper form-inline dt-bootstrap no-footer query-result" id="DataTables_Table_1_wrapper">
-		<table class="table table-striped m-b-none dataTable no-footer" id="DataTables_Table_1" style="width: 1678px;">
+	<div class="" id="DataTables_Table_1_wrapper">
+		<table class="table table-striped m-b-none dataTable no-footer" id="DataTables_Table_1">
 			<thead>
 			<th style="width: 300px;" class="sorting_asc" tabindex="0"rowspan="1" colspan="1">书名</th>
 			<th style="width: 300px;" class="sorting_asc" tabindex="0"rowspan="1" colspan="1">作者</th>
 			<th style="width: 300px;" class="sorting_asc" tabindex="0"rowspan="1" colspan="1">出版社</th>
-			<th style="width: 300px;" class="sorting_asc" tabindex="0"rowspan="1" colspan="1">剩余数量</th>
+			<th style="width: 300px;" class="sorting_asc" tabindex="0"rowspan="1" colspan="1">索书号</th>
+			<th style="width: 300px;" class="sorting_asc" tabindex="0"rowspan="1" colspan="1">所在地</th>
 			</thead>
 			<tbody  id="#pagination">
 
 				<tr ng-repeat="book in Books | orderBy: 'bookName'" class="odd" role="row">
-					<td><a href="/bookdetail/{{book.id}}">《{{book.bookName}}》</a></td>
+					<td><a href="#/detail/{{book.bookID}}">《{{book.bookName}}》</a></td>
 					<td>{{book.bookAuthor}}</td>
 					<td>{{book.bookPublish}}</td>
-					<td>{{book.bookAmount}}</td>
+					<td>{{book.bookid}}</td>
+					<td>{{book.bookAddr}}</td>
 				</tr>	
 			</tbody>
 		</table>

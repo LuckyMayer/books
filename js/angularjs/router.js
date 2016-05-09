@@ -4,4 +4,8 @@ app.config(['$routeProvider',function($routeProvider) {
 		controller: "queryController",
 		templateUrl:"../views/book-query.html"
 	});
+	route.when('/detail/:id',{
+		controller: "detailController",
+		templateUrl: "../views/book-detail.html"
+	})
 }])
