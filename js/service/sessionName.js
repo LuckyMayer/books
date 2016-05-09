@@ -1,9 +1,10 @@
 app.factory('sessionName',[ '$rootScope',function($rootScope){
-	$rootScope.Name="";
 	sessionName={};
 	sessionName.set=function(Name){
-
-		$rootScope.Name=Name;
+		if(Name&&Name!="") {
+			$rootScope.Name=Name;
+			alert($rootScope.Name);
+		}
 	}
 	sessionName.get=function() {
 		return $rootScope.Name;
