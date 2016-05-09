@@ -25,6 +25,7 @@
 	<script type="text/javascript" src="../js/angularjs/angular-resource.js"></script>
 	<script type="text/javascript" src="../js/controller/queryController.js"></script>
 	<script type="text/javascript" src="../js/controller/detailController.js"></script>
+	<script type="text/javascript" src="../js/service/sessionName.js"></script>
 	<?php
 		if(!isset($_SESSION['username']))
 	{	?>

@@ -1,7 +1,7 @@
 
 pageSize=10;
-app.controller('queryController', ['$scope','$http', function($scope,$http){
-
+app.controller('queryController', ['$scope','$http','sessionName','$routeParams',function($scope,$http,sessionName,$routeParams){
+    sessionName.set($routeParams.name);
     $http.get("../php/getBooks.php").success(function(data){
         $scope.books=data;
         if(data=="") $scope.dataCounts=true;

@@ -46,9 +46,9 @@ app.controller("zanController",function($scope,$http){
 	}
 });
 
-app.controller("commentController",function($scope,$http){
+app.controller("commentController",function($scope,$http,sessionName,$rootScope){
 	 $scope.subComment=function(bookID,username) {
 	 	console.log(bookID);
-	 	console.log(username);
+	 	console.log(sessionName.get());
 	 }
 })

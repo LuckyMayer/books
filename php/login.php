@@ -15,9 +15,8 @@ $_SESSION['username']=$_POST["username"];
 	if($st->fetchColumn())
 	{
 
-		?>
-		<script>window.location.href="../views/#/query";</script>
-		<?php
+	
+		echo "<script>window.location.href='../views/#/query/".$_POST["username"]."';</script>";
 
 	}else {
 		echo "<script type='text/javascript'>alert('用户名或者密码错误!!');window.location.href='../views/login.php';</script>";

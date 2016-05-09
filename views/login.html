@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
@@ -12,11 +12,18 @@
 	<link rel="stylesheet" type="text/css" href="../css/login.css">
 	<link rel="stylesheet" type="text/css" href="../css/icons.css">
 	<script type="text/javascript" src="../js/angular.js"></script>
-	<script type="text/javascript">
-
+	<script type="text/javascript" src="../js/angular-route.min.js"></script>
+	<script type="text/javascript" src="../js/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/jquery/operation.js"></script>
+	<script type="text/javascript" src="../js/angularjs/app.js"></script>
+	<script type="text/javascript" src="../js/angularjs/router.js"></script>
+	<script type="text/javascript" src="../js/filter/pagination.js"></script>
+	<script type="text/javascript" src="../js/angularjs/angular-resource.js"></script>
+	<script type="text/javascript" src="../js/controller/queryController.js"></script>
+	<script type="text/javascript" src="../js/controller/detailController.js"></script>
 	</script>
 </head>
-<body>
+<body ng-controller="sessionController">
 	<div id="header"></div>
 	<form name="formLogin" id="form-login" action="../php/login.php" method="post">
 		<div class="form-header">

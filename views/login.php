@@ -4,7 +4,7 @@ session_destroy();
 /*echo $_SESSION['username'];*/
 ?>
 <!DOCTYPE html>
-<html>
+<html >
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
@@ -17,8 +17,6 @@ session_destroy();
 	<link rel="stylesheet" type="text/css" href="../css/login.css">
 <!-- 	<link rel="stylesheet" type="text/css" href="../css/icons.css"> -->
 	<script type="text/javascript" src="../js/angular.js"></script>
-	<script type="text/javascript">
-
 	</script>
 </head>
 <body>
@@ -34,7 +32,7 @@ session_destroy();
 			</p>
 		</div>
 		<div class="form-group">
-			<input type="text" name="username" id="username" placeholder="用户名" required="required" class="input" autofocus="autofocus">
+			<input type="text" name="username" id="username" placeholder="用户名" required="required" class="input" autofocus="autofocus" ng-model="Name">
 			<i class="icon-user"></i>
 		</div>
 		<div class="form-group">
@@ -42,7 +40,7 @@ session_destroy();
 			<i class="icon-lock"></i>
 		</div>
 		<div class="form-group">
-			<input type="submit" id="sub" value="登 录" class="btn btn_sub" ng-disabled="!formLogin.$valid">
+			<input type="submit" id="sub" value="登 录" class="btn btn_sub" ng-disabled="!formLogin.$valid" ng-click="saveInfo(Name)">
 		</div>
 		<div class="form-group">
 			<a href="registed.html" id="registed" class="btn btn_reg">注 册</a>

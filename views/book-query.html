@@ -15,11 +15,6 @@
 		<div class="query-input">
 			<input type="text" placeholder="输入关键词进行查找" id="keyWord" ng-model="Name">
 			<button id="query-btn" class="btn" ng-click="queryBooks(Name)">查 询</button>
-<!-- 			<ul id="query-list" ng-if="Name">
-	<li name="bookName" ng-repeat="book in books" ng-click="selectBook(book.Name)">
-		{{book.Name}}
-	</li>
-</ul> -->
 		</div>
 	</div>
 	<div class="" id="DataTables_Table_1_wrapper">
@@ -37,7 +32,7 @@
 					<td><a href="#/detail/{{book.bookID}}">《{{book.bookName}}》</a></td>
 					<td>{{book.bookAuthor}}</td>
 					<td>{{book.bookPublish}}</td>
-					<td>{{book.bookid}}</td>
+					<td>{{book.bookID}}</td>
 					<td>{{book.bookAddr}}</td>
 				</tr>	
 			</tbody>
