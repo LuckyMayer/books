@@ -1,10 +1,10 @@
-<div id="queryHot">
+<div id="userOrder">
 	<div class="query-header">
 		<h1>
-			<i class="icon-fire i-title"></i>
-			热门图书查询
+			<i class="icon-bell i-title"></i>
+			图书预约
 		</h1>
-	</div>	
+	</div>
 	<div id="typeList">
 		<ul class="type" >
 			<li ng-repeat="type in kinds" ng-click="typeSelect($index+1)" ng-class="liClass($index)">{{type.types}}</li>
@@ -19,6 +19,7 @@
 				<th style="width: 300px;" class="sorting_asc"  colspan="1">索书号</th>
 				<th style="width: 300px;" class="sorting_asc"  colspan="1">所在地</th>
 				<th style="width: 300px;" class="sorting_asc"  colspan="1">好评数</th>
+				<th style="width: 300px;" class="sorting_asc"  colspan="1">预 约</th>
 			</thead>
 			<tbody>
 				<tr ng-repeat="book in Books " class="odd" role="row">
@@ -28,6 +29,7 @@
 					<td>{{book.bookID}}</td>
 					<td>{{book.bookAddr}}</td>
 					<td>{{book.zan}}</td>
+					<td><button class="btn btn-primary" ng-click="order(bookID)">预 约</button></td>
 				</tr>
 			</tbody>
 		</table>

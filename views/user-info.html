@@ -1,0 +1,25 @@
+<div id="userInfo">
+	<div class="query-header">
+		<h1>
+			<i class="icon-users i-title"></i>
+			用户信息
+		</h1>
+	</div>
+	<div class="book-info">
+		<div class="user-group">
+			<label for="username">用户昵称:</label>
+			<input type="text" id="username" ng-model="userName" class="input_text"></input>
+		</div>
+		<div class="user-group">
+			<label for="userpsw">修改密码:</label>
+			<input type="password" id="userpsw" ng-model="userPsw" class="input_text"></input>
+		</div>
+		<div class="user-group">
+			<label for="psw">确认密码:</label>
+			<input type="password" id="psw" ng-model="psw" class="input_text"></input>
+		</div>		
+		<div class="user-group">
+			<button class="btn btn-primary" ng-click="update()">确认修改</button>
+		</div>
+	</div>
+</div>

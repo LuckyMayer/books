@@ -1,8 +1,8 @@
 var pageSize=10;
-app.controller('queryHotController', ['$scope','sessionName','$http', function($scope,sessionName,$http){
+app.controller('orderController', ['$scope','sessionName','$http', function($scope,sessionName,$http){
 		$http({
 			method: 'GET',
-			url: '../php/getHotbooks.php'
+			url: '../php/getOrderbooks.php'
 		}).success(function(data){
 			$scope.books=data;
 			$scope.selectedPage=1;
@@ -43,7 +43,7 @@ app.controller('queryHotController', ['$scope','sessionName','$http', function($
             $scope.liClass(index-1);
 			$http({
 				method: 'POST',
-				url: '../php/getSelectedbook.php',
+				url: '../php/getSelectedorderbook.php',
 				data: {typeID:index}
 			}).success(function(data){
 			$scope.books=data;
@@ -65,6 +65,18 @@ app.controller('queryHotController', ['$scope','sessionName','$http', function($
         	$scope.Books=$scope.books.slice($scope.start,$scope.end);  
 			}).error(function() {
 				alert("出错了!!");
+			});
+		}
+		var orderName=sessionName.get();
+		$scope.order=function(bookID) {
+			$http({
+				method: "POST",
+				url: '../php/orderBoook.php',
+				data: {bookID:bookID,orderName:orderName}
+			}).success(function(){
+				alert("预约成功!!");
+			}).error(function() {
+				alert("预约失败!!");
 			});
 		}
 }])

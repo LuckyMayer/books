@@ -16,16 +16,14 @@ app.controller('queryController', ['$scope','$http','sessionName','$routeParams'
             $scope.selectedPage=index+1;
             $scope.Books=$scope.books.slice($scope.start,$scope.end);
         }
-        $scope.selectBook=function(name){
-            $scope.Name=name;
-        }
+
         $scope.getPageClass=function(page){
             return $scope.selectedPage==page?"btn-primary":"";
         }
 
         $scope.Books=$scope.books.slice($scope.start,$scope.end);
     }).error(function() {
-        alert("somthing wrong!");
+        alert("获取书籍信息失败");
     
     });
     $scope.dataCounts=false;
@@ -39,9 +37,7 @@ app.controller('queryController', ['$scope','$http','sessionName','$routeParams'
          if(data=="") $scope.dataCounts=true;
         else $scope.dataCounts=false;
         $scope.books=data;
-        console.log(data);
         $scope.selectedPage=1;
-
         $scope.end=pageSize;
         $scope.start=0;
         $scope.getCurrentPage=function(index) {
@@ -50,16 +46,13 @@ app.controller('queryController', ['$scope','$http','sessionName','$routeParams'
             $scope.selectedPage=index+1;
             $scope.Books=$scope.books.slice($scope.start,$scope.end);
         }
-        $scope.selectBook=function(name){
-            $scope.Name=name;
-        }
         $scope.getPageClass=function(page){
             return $scope.selectedPage==page?"btn-primary":"";
         }
 
         $scope.Books=$scope.books.slice($scope.start,$scope.end);    
     }).error(function() {
-       alert("somthing wrong");
+       alert("查询出错！！");
     });
 }
 }]);

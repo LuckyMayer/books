@@ -26,8 +26,9 @@
 	<script type="text/javascript" src="../js/angularjs/angular-resource.js"></script>
 	<script type="text/javascript" src="../js/controller/queryController.js"></script>
 	<script type="text/javascript" src="../js/controller/detailController.js"></script>
-
 	<script type="text/javascript" src="../js/controller/queryHotController.js"></script>
+	<script type="text/javascript" src="../js/controller/userinfoController.js"></script>
+	<script type="text/javascript" src="../js/controller/orderController.js"></script>
 	<?php
 		if(!isset($_SESSION['username']))
 	{	?>
@@ -63,7 +64,7 @@
 					<i class=" fa fa-angle-down"></i>
 					<ul class="ul-child">
 						<li><a href="#/user-info">用户信息</a></li>
-						<li><a href="#/query-order.html">图书预约</a></li>
+						<li><a href="#/user-order">图书预约</a></li>
 						<li><a href="#/user-query">借阅记录</a></li>
 						<li><a href="#/user-message">消息中心</a></li>
 					</ul>

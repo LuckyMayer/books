@@ -15,5 +15,13 @@ app.config(['$routeProvider',function($routeProvider) {
 	route.when('/query-hot',{
 		controller: "queryHotController",
 		templateUrl: "../views/query-hot.html"
+	});
+	route.when('/user-info',{
+		controller: "userinfoController",
+		templateUrl: "../views/user-info.html"
+	});
+	route.when('/user-order',{
+		controller: 'orderController',
+		templateUrl: "../views/user-order.html"
 	})
 }])

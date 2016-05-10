@@ -113,7 +113,9 @@ ul.ul-child li a {
 /* 图书查询 */
 #book-query,
 #book-detail,
-#queryHot {
+#queryHot ,
+#userInfo ,
+#userOrder {
 	overflow: hidden;
 	margin-bottom: 15px;
 	padding: 20px;
@@ -292,4 +294,18 @@ p button.opp
 }
 table.books-table {
 	border: 1px solid #dbdbdb;
+}
+
+/*用户信息*/
+.user-group {
+	width: 300px;
+	margin: 15px;
+	padding: 8px;
+	line-height: 1.5;
+}
+.user-group input.input_text {
+	height: 35px;
+	border: 1px solid #dbdbdb;
+	text-indent: 15px;
+
 }

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 2016-05-09 18:17:11
+-- Generation Time: 2016-05-10 17:13:51
 -- 服务器版本： 5.6.17
 -- PHP Version: 5.5.12
 
@@ -23,28 +23,18 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- 表的结构 `booktype`
+-- 表的结构 `lendhistory`
 --
 
-CREATE TABLE IF NOT EXISTS `booktype` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `types` varchar(100) CHARACTER SET utf8 COLLATE utf8_icelandic_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
-
---
--- 转存表中的数据 `booktype`
---
-
-INSERT INTO `booktype` (`id`, `types`) VALUES
-(1, '计算机技术'),
-(2, '外国书籍'),
-(3, '马克思主义\\邓小平理论\\毛泽东思想'),
-(4, '军事'),
-(5, '艺术'),
-(6, '数理科学与化学'),
-(7, '文学'),
-(8, '政治法律');
+CREATE TABLE IF NOT EXISTS `lendhistory` (
+  `id` int(11) DEFAULT NULL,
+  `bookName` varchar(200) CHARACTER SET utf8 COLLATE utf8_icelandic_ci NOT NULL,
+  `userName` varchar(20) CHARACTER SET utf8 COLLATE utf8_icelandic_ci NOT NULL,
+  `browDate` date NOT NULL,
+  `shoudReturn` date NOT NULL,
+  `isReturn` int(11) NOT NULL,
+  `returnDate` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
