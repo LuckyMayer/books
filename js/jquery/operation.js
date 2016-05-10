@@ -43,5 +43,9 @@ $(document).ready(function(){
 			}
 	})
 
+	$("#content-body").on("click","#typeList .type li",function(){
+		$(this).addClass("selected").siblings().removeClass("selected");
+	})
+
 
 })

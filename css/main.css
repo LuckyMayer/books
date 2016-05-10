@@ -280,11 +280,16 @@ p button.opp
 	margin: 10px 20px;
 	border-radius: 4px;
 }
-#typeList .type li:hover {
+#typeList .type li:hover ,
+#typeList .type li.selected{
 	background-color: #0a8dce;
 	color: #fff;
 	cursor: pointer;
 }
+
 #bookList {
 	padding: 5px;
+}
+table.books-table {
+	border: 1px solid #dbdbdb;
 }
