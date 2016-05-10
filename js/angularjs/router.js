@@ -12,4 +12,8 @@ app.config(['$routeProvider',function($routeProvider) {
 		controller: "queryController",
 		templateUrl:"../views/book-query.html"
 	});
+	route.when('/query-hot',{
+		controller: "queryHotController",
+		templateUrl: "../views/query-hot.html"
+	})
 }])

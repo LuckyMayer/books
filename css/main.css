@@ -112,7 +112,8 @@ ul.ul-child li a {
 
 /* 图书查询 */
 #book-query,
-#book-detail{
+#book-detail,
+#queryHot {
 	overflow: hidden;
 	margin-bottom: 15px;
 	padding: 20px;
@@ -262,3 +263,28 @@ p button.opp
 	padding: 3px;
 }
 
+/* 热门图书 */
+#typeList {
+	padding: 8px 12px;
+	margin-top: 8px;
+	overflow: hidden;
+}
+#typeList .type li {
+	float: left;
+	padding: 5px;
+	border: 1px solid #dbdbdb;
+	line-height: 1.5;
+	height: 35px;
+	text-align: center;
+	width: 260px;
+	margin: 10px 20px;
+	border-radius: 4px;
+}
+#typeList .type li:hover {
+	background-color: #0a8dce;
+	color: #fff;
+	cursor: pointer;
+}
+#bookList {
+	padding: 5px;
+}
