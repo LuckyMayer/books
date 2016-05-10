@@ -46,9 +46,44 @@ app.controller("zanController",function($scope,$http){
 	}
 });
 
-app.controller("commentController",function($scope,$http,sessionName,$rootScope){
-	 $scope.subComment=function(bookID,username) {
-	 	console.log(bookID);
-	 	console.log(sessionName.get());
+app.controller("commentController",function($scope,$http,sessionName,$rootScope,$routeParams){
+	var id=$routeParams.id;
+	$http({
+		method: 'POST',
+		url: '../php/commentList.php',
+		data: {id:id}
+	}).success(function(data){
+		console.log(data);
+		$scope.comments=data;
+	}).error(function() {
+		alert("something Wrong!!");
+	});
+	 $scope.subComment=function(bookID,comment){
+	 	var userName=sessionName.get();
+	 	var info={
+	 		id:bookID,
+	 		comments: comment,
+	 		user: sessionName.get()
+	 	}
+	 	$http({
+	 		method: 'POST',
+	 		url: '../php/subComment.php',
+	 		data: info
+	 	}).success(function(data){
+	 		console.log(data);
+	 		$scope.content="";
+	$http({
+		method: 'POST',
+		url: '../php/commentList.php',
+		data: {id:id}
+	}).success(function(data){
+		console.log(data);
+		$scope.comments=data;
+	}).error(function() {
+		alert("something Wrong!!");
+	});
+	 	}).error(function() {
+	 		alert("something wrong!!");
+	 	});
 	 }
 })

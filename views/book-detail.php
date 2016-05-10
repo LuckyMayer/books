@@ -53,16 +53,14 @@
 			</h3>
 		</div>
 		<div class="comment-list">
-			<div class="bk-group">
-				<p class="userID"><span>暴力小孩</span></p>
-				<p class="comdate"><span class="smal">2016-04-21</span></p>
-				<p class="comment">这本书还不错的样子</p>
+			<div class="bk-group" ng-repeat="comment in comments">
+				<p class="userID"><span>{{comment.userName}}</span><span class="smal">({{comment.commentdate}})</span></p>
+				<p class="comment">{{comment.comment}}</p>
 			</div>
 		</div>
 		<div class="comment-onself">
-			<textarea placeholder="在这边进行评论，不要超过100字.."></textarea>
-			<!-- <button class="btn btn-primary" ng-click="subComment(bookInfo.bookID,$_SESSION['username'])">提交评论</button> -->
-			<?php echo "<button class='btn btn-primary' ng-click='subComment(bookInfo.bookID,".$_SESSION['username'].")''>提交评论</button>";?>
+			<textarea placeholder="在这边进行评论，不要超过100字.." ng-model="content"></textarea>
+			<button class="btn btn-primary" ng-click="subComment(bookInfo.bookID,content)">提交评论</button>
 		</div>
 	</div>
 </div>
