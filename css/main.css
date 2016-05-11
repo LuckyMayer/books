@@ -116,7 +116,8 @@ ul.ul-child li a {
 #queryHot ,
 #userInfo ,
 #userOrder,
-#userBorrow {
+#userBorrow,
+#bookOnshelf{
 	overflow: hidden;
 	margin-bottom: 15px;
 	padding: 20px;
@@ -321,4 +322,16 @@ table.books-table {
 }
 span.outline {
 	color: red;
+}
+
+/* 图书上架 */
+select#keyType {
+	width: 174px;
+	display: inline-block;
+}
+#bookOnshelf textarea {
+	width: 846px;
+	height: 156px;
+	resize: none;
+	margin-left: 15px;
 }

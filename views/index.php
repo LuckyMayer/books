@@ -74,7 +74,7 @@
 					<p class="menu-title admin">管理员版块</p>
 					<i class=" fa fa-angle-down"></i>
 					<ul class="ul-child">
-						<li><a href="#/admin-onshelf">新书上架</a></li>
+						<li><a href="#/onshelf">新书上架</a></li>
 						<li><a href="#/admin-offshelf">图书下架</a></li>
 						<li><a href="#/admin-query">借阅记录</a></li>
 					</ul>

@@ -27,5 +27,9 @@ app.config(['$routeProvider',function($routeProvider) {
 	route.when('/user-borrow',{
 		controller: 'borrowGetController',
 		templateUrl: '../views/user-borrow.html'
+	});
+	route.when('/onshelf',{
+		controller:'onshelfController',
+		templateUrl: '../views/book-onshelf.html'
 	})
 }])

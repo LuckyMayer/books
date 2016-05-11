@@ -1,0 +1,47 @@
+<div id="bookOnshelf">
+	<div class="query-header">
+		<h1>
+			<i class="glyphicon glyphicon-cloud-upload i-title"></i>
+			新书上架
+		</h1>
+	</div>
+	<div id="bookOnshelf" class="book-info">
+		<div class="bk-group">
+			<span>书籍名称</span>
+			<input type="text" ng-model="bookName">
+		</div>	
+		<div class="bk-group">
+			<span>书籍作者</span>
+			<input type="text" ng-model="bookAuthor">
+		</div>
+		<div class="bk-group">
+			<span>当前版本</span>
+			<input type="text" ng-model="bookVersion">
+		</div>
+		<div class="bk-group">
+			<span>图书出版</span>
+			<input type="text" ng-model="bookPublish">
+		</div>
+		<div class="bk-group">
+			<span>藏书位置</span>
+			<input type="text" ng-model="bookType">
+		</div>
+		<div class="bk-group">
+			<span>图书类型</span>
+			<select  class="input-sm form-control w-sm inline v-middle" id="keyType">
+				<option value="0">计算机技术</option>
+				<option value="1">书名</option>
+				<option value="2">作者</option>
+				<option value="3">出版社</option>
+			</select>
+		</div>
+		<div class="bk-group">
+			<span>图书简介</span>
+			<textarea placeholder="300字以内的评价~~" ng-model="bookBrief"></textarea>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="bk-group">
+			<button class="btn btn-primary" ng-click="onShelf()">上架入库</button>
+		</div>
+	</div>
+</div>
