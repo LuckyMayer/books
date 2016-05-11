@@ -30,6 +30,8 @@
 	<script type="text/javascript" src="../js/controller/userinfoController.js"></script>
 	<script type="text/javascript" src="../js/controller/orderController.js"></script>
 	<script type="text/javascript" src="../js/controller/borrowGetController.js"></script>
+	<script type="text/javascript" src=../js/controller/onshelfController.js></script>
+	<script type="text/javascript" src="../js/controller/offshelfController.js"></script>
 	<?php
 		if(!isset($_SESSION['username']))
 	{	?>
@@ -76,7 +78,7 @@
 					<ul class="ul-child">
 						<li><a href="#/onshelf">新书上架</a></li>
 						<li><a href="#/offshelf">图书下架</a></li>
-						<li><a href="#/admin-query">借阅记录</a></li>
+						<li><a href="#/admin-borrow">借阅记录</a></li>
 					</ul>
 				</li>
 				<li id="others-module">

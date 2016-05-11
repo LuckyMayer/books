@@ -35,5 +35,9 @@ app.config(['$routeProvider',function($routeProvider) {
 	route.when('/offshelf',{
 		controller: 'offshelfController',
 		templateUrl: '../views/book-offshelf.html'
+	});
+	route.when('/admin-borrow',{
+		contoroller: 'adminBorrowController',
+		templateUrl: '../views/admin-borrow.html'
 	})
 }])

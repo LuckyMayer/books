@@ -118,7 +118,8 @@ ul.ul-child li a {
 #userOrder,
 #userBorrow,
 #bookOnshelf,
-#Offshelf {
+#Offshelf ,
+#adminBorrow{
 	overflow: hidden;
 	margin-bottom: 15px;
 	padding: 20px;
@@ -176,6 +177,7 @@ ul.ul-child li a {
 	position: absolute;
 	bottom: 50px;
 	width:100%;
+	z-index: -999;
 }
 #footer p {
 	display: block;

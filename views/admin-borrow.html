@@ -1,4 +1,4 @@
-<div id="userBorrow">
+<div id="adminBorrow">
 	<div class="query-header">
 		<h1>
 			<i class="icon-grid i-title"></i>
@@ -18,7 +18,7 @@
 					<th style="width: 300px;" class="sorting_asc"  colspan="1">开始时间</th>
 					<th style="width: 300px;" class="sorting_asc"  colspan="1" ng-hide="isReturn">应归还时间</th>
 					<th style="width: 300px;" class="sorting_asc"  colspan="1" ng-show="isReturn">归还时间</th>
-					<th style="width: 300px;" class="sorting_asc"  colspan="1" ng-hide="isReturn">通知</th>
+					<th style="width: 300px;" class="sorting_asc"  colspan="1" ng-hide="isReturn">是否续借</th>
 				</thead>
 				<tbody>
 					<tr ng-repeat="record in Records " class="odd" role="row">
@@ -28,7 +28,8 @@
 						<td class="borrow-line" ng-hide="isReturn">{{record.shouldReturn}}</td>
 						<td class="borrow-line" ng-show="isReturn">{{record.returnDate}}</td>
 						<td ng-hide="isReturn">
-							<button class="btn btn-primary" ng-show="{{record.outLine}}" ng-click="message()">续借该书籍</button>
+							<button class="btn btn-primary" ng-hide="{{record.outLine}}" ng-click="Longer(record.bookName)">续借该书籍</button>
+							<span style="color: red" ng-show="{{record.outLine}}">!!!已经超过借阅时间请及时归还</span>
 						</td>
 					</tr>
 				</tbody>
@@ -37,7 +38,7 @@
 				<a ng-repeat="page in records | cut" class="btn btn-default" ng-click="getCurrentPage($index)" ng-class="getPageClass($index+1)">
 					{{$index + 1}}
 				</a>
-			</div>
-		</div>
+			</div>		
+		</div>		
 	</div>
 </div>

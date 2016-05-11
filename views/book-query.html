@@ -28,7 +28,7 @@
 			</thead>
 			<tbody  id="#pagination">
 
-				<tr ng-repeat="book in Books | orderBy: 'bookName'" class="odd" role="row">
+				<tr ng-repeat="book in Books" class="odd" role="row">
 					<td><a href="#/detail/{{book.bookID}}">《{{book.bookName}}》</a></td>
 					<td>{{book.bookAuthor}}</td>
 					<td>{{book.bookPublish}}</td>
