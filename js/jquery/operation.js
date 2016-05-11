@@ -43,8 +43,8 @@ $(document).ready(function(){
 			}
 	})
 
-	$("#content-body").on("click","#typeList .type li",function(){
-		$(this).addClass("selected").siblings().removeClass("selected");
+	$("#content-body").on("click","#userBorrow .record-select button",function(){
+		$(this).addClass("btn-primary").siblings().removeClass("btn-primary");
 	})
 
 

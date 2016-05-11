@@ -1,0 +1,43 @@
+<div id="userBorrow">
+	<div class="query-header">
+		<h1>
+			<i class="icon-grid i-title"></i>
+			借阅记录
+		</h1>
+	</div>
+	<div class="borrow-record">
+		<div class="record-select">
+			<button class="btn btn-primary" ng-click="toReturnView()">未归还</button>
+			<button class="btn" ng-click="ReturnedView()">已归还</button>
+		</div>
+		<div id="bookList">
+			<table class="table books-table">
+				<thead>
+					<th style="width: 300px;" class="sorting_asc"  colspan="1">序号</th>
+					<th style="width: 300px;" class="sorting_asc"  colspan="1">书名</th>
+					<th style="width: 300px;" class="sorting_asc"  colspan="1">开始时间</th>
+					<th style="width: 300px;" class="sorting_asc"  colspan="1" ng-hide="isReturn">应归还时间</th>
+					<th style="width: 300px;" class="sorting_asc"  colspan="1" ng-show="isReturn">归还时间</th>
+					<th style="width: 300px;" class="sorting_asc"  colspan="1" ng-hide="isReturn">是否续借</th>
+				</thead>
+				<tbody>
+					<tr ng-repeat="record in Records " class="odd" role="row">
+						<td class="borrow-line">{{$index+1}}</td>
+						<td class="borrow-line">《{{record.bookName}}》</td>
+						<td class="borrow-line">{{record.borrowDate}}</td>
+						<td class="borrow-line">{{record.returnDate}}</td>
+						<td ng-hide="isReturn">
+							<button class="btn btn-primary" ng-hide="{{record.outLine}}">续借该书籍</button>
+							<span style="color: red" ng-show="{{record.outLine}}">!!!已经超过借阅时间请及时归还</span>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="pull-right btn-group">
+				<a ng-repeat="page in records | cut" class="btn btn-default" ng-click="getCurrentPage($index)" ng-class="getPageClass($index+1)">
+					{{$index + 1}}
+				</a>
+			</div>		
+		</div>		
+	</div>
+</div>

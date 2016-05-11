@@ -115,7 +115,8 @@ ul.ul-child li a {
 #book-detail,
 #queryHot ,
 #userInfo ,
-#userOrder {
+#userOrder,
+#userBorrow {
 	overflow: hidden;
 	margin-bottom: 15px;
 	padding: 20px;
@@ -308,4 +309,16 @@ table.books-table {
 	border: 1px solid #dbdbdb;
 	text-indent: 15px;
 
+}
+
+/* 预约查询 */
+.record-select {
+	margin: 15px 0;
+}
+
+#bookList table tr td.borrow-line {
+	line-height: 30px;
+}
+span.outline {
+	color: red;
 }

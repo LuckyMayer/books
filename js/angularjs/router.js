@@ -23,5 +23,9 @@ app.config(['$routeProvider',function($routeProvider) {
 	route.when('/user-order',{
 		controller: 'orderController',
 		templateUrl: "../views/user-order.html"
+	});
+	route.when('/user-borrow',{
+		controller: 'borrowGetController',
+		templateUrl: '../views/user-borrow.html'
 	})
 }])
