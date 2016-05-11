@@ -31,5 +31,9 @@ app.config(['$routeProvider',function($routeProvider) {
 	route.when('/onshelf',{
 		controller:'onshelfController',
 		templateUrl: '../views/book-onshelf.html'
+	});
+	route.when('/offshelf',{
+		controller: 'offshelfController',
+		templateUrl: '../views/book-offshelf.html'
 	})
 }])
