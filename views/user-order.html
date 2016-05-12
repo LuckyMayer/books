@@ -29,7 +29,10 @@
 					<td>{{book.bookID}}</td>
 					<td>{{book.bookAddr}}</td>
 					<td>{{book.zan}}</td>
-					<td><button class="btn btn-primary" ng-click="order(bookID)">预 约</button></td>
+					<td>
+						<button class="btn btn-primary" ng-click="order(book.bookID,book.bookName)" ng-hide="book.ordered" id="orderBtn">预 约</button>
+						<button class="btn btn-primary disabled" ng-show="book.ordered">已预约</button>
+					</td>
 				</tr>
 			</tbody>
 		</table>

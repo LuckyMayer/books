@@ -12,8 +12,11 @@
 	<link rel="stylesheet" type="text/css" href="../css/login.css">
 	<link rel="stylesheet" type="text/css" href="../css/icons.css">
 	<script type="text/javascript" src="../js/angular.js"></script>	
+	<script type="text/javascript" src="../js/registe.js"></script>
+	<script type="text/javascript" src="../js/jquery/jquery.min.js"></script>
+
 </head>
-<body>
+<body ng-app="register" ng-controller="registeController">
 	<div id="header">
 	</div>
 	<form name="form-reg" id="form-reg" action="" method="post" class="reg_login">
@@ -22,23 +25,37 @@
 		</div>
 		<div class="form-group">
 			<label for="username">用户账号:</label>
-			<input type="text" id="username" autofocus="autofocus" required="required" class="reg-input">
+			<input type="text" id="username" autofocus="autofocus" required="required" class="reg-input" ng-model="userName">
 		</div>
 		<div class="form-group">
 			<label for="password">登录密码:</label>
-			<input type="password" id="password" required class="reg-input">
+			<input type="password" id="password" required class="reg-input" ng-model="password">
 		</div>
 		<div class="form-group">
 			<label for="psw-en">确认密码:</label>
 			<input type="password" id="psw-en" class="reg-input">
 		</div>
 		<div class="form-group">
-			<img src="" alt="验证码" class="code">
-			<input type="text" id="code" placeholder="输入验证码" required="required" class="reg-input code">
+			<img src="" alt="验证码" class="code"  ng-src="../images/code_{{rand}}.png" ng-click="devCode()">
+			<input type="text" id="code" placeholder="输入验证码区分大小写" required="required" class="reg-input code" ng-model="Code">
 		</div>
 		<div class="form-group reg-form-group">
-			<input type="submit" id="regist" value="注册" class="btn btn_sub">
+			<input type="submit" id="regist" value="注册" class="btn btn_sub" ng-click="register(userName,password)">
 		</div>
 	</form>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#psw-en").blur(function(){
+				$pas=$("#password").val();
+				$pasen=$(this).val();
+				if($pas!=$pasen)
+				{
+					alert("两次输入密码不一样!!");
+				}
+
+		});
+
+	})
+</script>
 </body>
 </html>

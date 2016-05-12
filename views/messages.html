@@ -1,0 +1,17 @@
+<div id="messages">
+	<div class="query-header">
+		<h1>
+			<i class="fa fa-envelope-o i-title"></i>
+			消息中心
+		</h1>
+	</div>
+	<div class="message-content">
+		<div class="message-box" ng-repeat="message in messages">
+			<p class="sender"><span class="senderName">发送者:{{message.sender}}</span><span class="sender-time">发送时间:{{message.postTime}}</span></p>
+			<p>信息内容:</p>
+			<p class="content">{{message.content}}</p>
+			<button class="btn btn-danger message-btn" ng-click="messageDelete(message.id)">删除</button>
+			<button class="btn btn-primary message-btn read" ng-click="messageRead(message.id)" ng-show="message.isRead">标记为已读</button>
+		</div>
+	</div>
+</div>

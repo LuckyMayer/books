@@ -36,8 +36,16 @@ app.config(['$routeProvider',function($routeProvider) {
 		controller: 'offshelfController',
 		templateUrl: '../views/book-offshelf.html'
 	});
-	route.when('/admin-borrow',{
-		contoroller: 'adminBorrowController',
-		templateUrl: '../views/admin-borrow.html'
+	route.when('/borrow-manage',{
+		controller: 'borrowManageController',
+		templateUrl: '../views/borrow-manage.html'
+	});
+	route.when('/message',{
+		controller: 'messageController',
+		templateUrl:'../views/messages.html'
+	});
+	route.when('/orderList',{
+		controller: 'orderManage',
+		templateUrl: '../views/orderList.html'
 	})
 }])

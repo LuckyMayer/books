@@ -30,8 +30,11 @@
 	<script type="text/javascript" src="../js/controller/userinfoController.js"></script>
 	<script type="text/javascript" src="../js/controller/orderController.js"></script>
 	<script type="text/javascript" src="../js/controller/borrowGetController.js"></script>
-	<script type="text/javascript" src=../js/controller/onshelfController.js></script>
+	<script type="text/javascript" src="../js/controller/onshelfController.js"></script>
 	<script type="text/javascript" src="../js/controller/offshelfController.js"></script>
+	<script type="text/javascript" src="../js/controller/borrowManageController.js"></script>
+	<script type="text/javascript" src="../js/controller/messageController.js"></script>
+	<script type="text/javascript" src="../js/controller/orderManage.js"></script>
 	<?php
 		if(!isset($_SESSION['username']))
 	{	?>
@@ -69,7 +72,7 @@
 						<li><a href="#/user-info">用户信息</a></li>
 						<li><a href="#/user-order">图书预约</a></li>
 						<li><a href="#/user-borrow">借阅记录</a></li>
-						<li><a href="#/user-message">消息中心</a></li>
+						<li><a href="#/message">消息中心</a></li>
 					</ul>
 				</li>
 				<li id="admin-module">
@@ -78,18 +81,23 @@
 					<ul class="ul-child">
 						<li><a href="#/onshelf">新书上架</a></li>
 						<li><a href="#/offshelf">图书下架</a></li>
-						<li><a href="#/admin-borrow">借阅记录</a></li>
+						<li><a href="#/borrow-manage">借阅记录</a></li>
+						<li><a href="#/orderList">查看预约</a></li>
 					</ul>
 				</li>
 				<li id="others-module">
 					<p class="menu-title admin">站外链接</p>
 					<i class=" fa fa-angle-down"></i>
 					<ul class="ul-child">
-						<li><a href="#/admin-onshelf">新书上架</a></li>
-						<li><a href="#/admin-offshelf">图书下架</a></li>
-						<li><a href="#/admin-query">借阅记录</a></li>
+						<li><a href="http://www.lib.hdu.edu.cn/">杭州电子科技大学图书馆</a></li>
+						<li><a href="http://www.cnki.net/">中国知网</a></li>
+						<li><a href="https://www.amazon.cn">亚马逊书城</a></li>
 					</ul>
-				</li>				
+				</li>
+				<li id="Information">
+					<h5>站内通知</h5>
+					<p>这是2016届毕业生的毕业设计作品，并未上线,这里将显示本站最新的通知</p>
+				</li>		
 			</ul>
 		</div>
 		<div id="content-body">

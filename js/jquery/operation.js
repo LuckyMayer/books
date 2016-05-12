@@ -43,9 +43,15 @@ $(document).ready(function(){
 			}
 	})
 
-	$("#content-body").on("click","#userBorrow .record-select button",function(){
+	$("#content-body").on("click"," .record-select button",function(){
 		$(this).addClass("btn-primary").siblings().removeClass("btn-primary");
 	})
 
+	$("#content-body").on("click","#sendMessage",function(){
+		$(this).removeClass("btn-primary").addClass("disabled").text("通知已发送");
+	});
 
+	$("#content-body").on("click","#orderBtn",function(){
+		$(this).removeClass("btn-primary").addClass('disabled').text("已预约");
+	})
 })

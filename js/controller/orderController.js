@@ -1,9 +1,12 @@
 var pageSize=10;
 app.controller('orderController', ['$scope','sessionName','$http', function($scope,sessionName,$http){
+		var orderName=sessionName.get();
 		$http({
-			method: 'GET',
-			url: '../php/getOrderbooks.php'
+			method: 'POST',
+			url: '../php/getOrderbooks.php',
+			data: {name:orderName}
 		}).success(function(data){
+			console.log(data);
 			$scope.books=data;
 			$scope.selectedPage=1;
        		$scope.end=pageSize;
@@ -20,7 +23,7 @@ app.controller('orderController', ['$scope','sessionName','$http', function($sco
         	$scope.getPageClass=function(page){
             	return $scope.selectedPage==page?"btn-primary":"";
         	}
-        	$scope.Books=$scope.books.slice($scope.start,$scope.end);   
+        	$scope.Books=$scope.books.slice($scope.start,$scope.end);  
 
 		}).error(function() {
 			alert("something wrong!!");
@@ -44,7 +47,7 @@ app.controller('orderController', ['$scope','sessionName','$http', function($sco
 			$http({
 				method: 'POST',
 				url: '../php/getSelectedorderbook.php',
-				data: {typeID:index}
+				data: {typeID:index,name:orderName}
 			}).success(function(data){
 			$scope.books=data;
 			$scope.selectedPage=1;
@@ -67,14 +70,16 @@ app.controller('orderController', ['$scope','sessionName','$http', function($sco
 				alert("出错了!!");
 			});
 		}
-		var orderName=sessionName.get();
-		$scope.order=function(bookID) {
+
+
+		$scope.order=function(bookID,bookName) {
 			$http({
 				method: "POST",
 				url: '../php/orderBoook.php',
-				data: {bookID:bookID,orderName:orderName}
-			}).success(function(){
+				data: {orderBook:bookName,orderName:orderName,bookID:bookID}
+			}).success(function(data){
 				alert("预约成功!!");
+				console.log(data);
 			}).error(function() {
 				alert("预约失败!!");
 			});

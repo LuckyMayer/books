@@ -2,6 +2,22 @@
 pageSize=10;
 app.controller('queryController', ['$scope','$http','sessionName','$routeParams',function($scope,$http,sessionName,$routeParams){
     sessionName.set($routeParams.name);
+    var user=sessionName.get();
+    $scope.messageShow=false;
+    /*判断是否有未读消息*/
+    $http({
+        method:'POST',
+        url: '../php/getMesaageCount.php',
+        data: {receive:user}
+    }).success(function(data){
+        if(data>0) $scope.messageShow=true;
+        else    $scope.messageShow=false;
+
+    }).error(function() {
+        alert("获取消息列表失败!!");
+    });
+
+    /**********************/
     $http.get("../php/getBooks.php").success(function(data){
         $scope.books=data;
         if(data=="") $scope.dataCounts=true;

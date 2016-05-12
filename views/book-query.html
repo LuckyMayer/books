@@ -5,6 +5,11 @@
 			搜索书籍
 		</h1>
 	</div>
+	<div class="message-remind">
+		<marquee direction="left" behavior="scroll" scrollamount="15" scrolldelay="500" loop="-1" ng-show="messageShow">
+			<i class="icon-volume-2" ng-show="messageShow"></i><a href="#/message" id="message" ng-show="messageShow">您有新消息,请注意查收</a>
+		</marquee>
+	</div>
 	<div class="query-operation">
 		<select  class="input-sm form-control w-sm inline v-middle" id="key-sel">
 			<option value="0">综合搜索</option>

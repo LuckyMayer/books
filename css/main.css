@@ -119,7 +119,9 @@ ul.ul-child li a {
 #userBorrow,
 #bookOnshelf,
 #Offshelf ,
-#adminBorrow{
+#adminBorrow,
+#messages,
+#orderList {
 	overflow: hidden;
 	margin-bottom: 15px;
 	padding: 20px;
@@ -337,4 +339,58 @@ select#keyType {
 	height: 156px;
 	resize: none;
 	margin-left: 15px;
+}
+.message-remind {
+	height: 35px;
+	overflow: hidden;
+	line-height: 35px;
+}
+a#message {
+	padding: 5px;
+	line-height: 1.5;
+	display: inline-block;
+	width: 200px;
+	color: red;
+}
+/* 消息中心 */
+span.senderName {
+	margin-right: 40px;
+}
+.message-box  {
+	padding: 5px;
+	margin: 15px 0;
+	border: 1px solid #dbdbdb;
+	position: relative;
+	overflow: hidden;
+}
+.message-box p {
+	line-height: 1.5;
+	margin-top: 8px;
+}
+.message-box p.content {
+	text-indent: 20px;
+}
+.message-box .message-btn {
+	position: absolute;
+	bottom: 5px;
+	right: 15px;
+}
+.message-box .read {
+	right: 100px;
+}
+
+/* 站内通告 */
+#Information {
+	margin-top: 25px;
+	background-color: #fff;
+	padding: 8px 5px;
+}
+#Information h5 {
+	text-align: center;
+}
+#Information p {
+	line-height: 1.5;
+	text-indent: 20px;
+	display: block;
+	padding: 5px;
 }
