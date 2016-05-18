@@ -34,8 +34,8 @@ app.controller('orderManage',function($scope,$http,sessionName){
 		$scope.SendMessage=function(receiver,bookName) {
 			var from="admin";
 			var receive=receiver;
-/*			var content="您借阅的书《"+bookName+"》已过期，请及时归还";*/
-			var content="Your book《"+bookName+"》 arrived";
+			var content="您预约的书《"+book预约的书Name+"》已到达";
+			//var content="Your book《"+bookName+"》 arrived";
 			$http({
 				method: 'POST',
 				url:'../php/sendmessage.php',

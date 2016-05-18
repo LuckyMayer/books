@@ -142,8 +142,8 @@ app.controller('borrowManageController', ['$scope','$http','sessionName', functi
 		$scope.SendMessage=function(index,receiver,bookName) {
 			var from="admin";
 			var receive=receiver;
-/*			var content="您借阅的书《"+bookName+"》已过期，请及时归还";*/
-			var content="Your book《"+bookName+"》has met deadLine";
+			var content="您借阅的书《"+bookName+"》已过期，请及时归还";
+			/*var content="Your book《"+bookName+"》has met deadLine";*/
 			$http({
 				method: 'POST',
 				url:'../php/sendmessage.php',
