@@ -27,5 +27,21 @@ reg.controller('registeController', ['$scope','$http', function($scope,$http){
 			default: 	
 				$scope.codes=false; break;				
 		}
+		if($scope.codes) {
+
+			$http({
+				method: 'POST',
+				url: '../php/registe.php',
+				data: {name:username,password:password}
+			}).success(function(){
+				//alert("注册成功!!");
+			}).error(function() {
+				alert("注册成功");
+			});
+		} else {
+			alert("验证码不正确");
+		}
 	}
+
+
 }])

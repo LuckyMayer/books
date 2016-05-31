@@ -28,7 +28,7 @@
 						<td class="borrow-line" ng-hide="isReturn">{{record.shouldReturn}}</td>
 						<td class="borrow-line" ng-show="isReturn">{{record.returnDate}}</td>
 						<td ng-hide="isReturn">
-							<button class="btn btn-primary" ng-hide="{{record.outLine}}">续借该书籍</button>
+							<button class="btn btn-primary" ng-hide="{{record.outLine}}" ng-click="Longer(record.bookName)">续借该书籍</button>
 							<span style="color: red" ng-show="{{record.outLine}}">!!!已经超过借阅时间请及时归还</span>
 						</td>
 					</tr>

@@ -171,8 +171,33 @@ app.controller('borrowGetController', ['$scope','$http','$routeParams','sessionN
 				url:'../php/toReturn.php',
 				data: {borrowName:user}
 			}).success(function(respon){
+
 				$scope.records=respon;
-				
+			angular.forEach($scope.records, function(value, key){
+					var shouldDate=value.shouldReturn;
+					var shouldYear=shouldDate.slice(0,4);
+					var shouldMonth=shouldDate.slice(5,7);
+					var shouldDay=shouldDate.slice(8,10);
+					$scope.records[key].outLine=false;
+					if(shouldYear>year)
+						$scope.records[key].outLine=false;
+					else if(shouldYear==year) {
+						if(shouldMonth>month)
+							$scope.records[key].outLine=false;
+						else if(shouldMonth==month) {
+								if(shouldDay>=day)
+									$scope.records[key].outLine=false;
+								else
+									$scope.records[key].outLine=true;
+						}
+						else if(shouldMonth<month) {
+							$scope.records[key].outLine=true;
+						}
+					}
+
+					else if(shouldYear<year)
+						$scope.records[key].outLine=true;
+				});
 				$scope.selectedPage=1;
         		$scope.end=pageSize;
        			$scope.start=0;

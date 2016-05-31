@@ -41,10 +41,13 @@
 				<i ng-class="shiningStar(4,bookInfo.zan)" id="lv_5"></i>
 				<i></i>
 				<button class="zan" ng-click="support(bookInfo.bookID)"><i class="icon-like"></i>推荐</button>
-				<button class="opp" ng-click="oppose(bookInfo.bookID)"><i class="icon-dislike"></i>推荐</button>
+				<button class="opp" ng-click="oppose(bookInfo.bookID)"><i class="icon-dislike"></i>差评</button>
 				</span>
 			</p>
 		</div>
+	</div>
+	<div class="bk-group" ng-if="bookInfo.bookAmount>0">
+		<button class="btn btn-primary" ng-click="borrow(bookInfo.bookName)">借阅此书籍</button>
 	</div>
 	<div class="book-comment" ng-controller="commentController">
 		<div class="query-header">

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="register">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />	
@@ -40,7 +40,7 @@
 			<input type="text" id="code" placeholder="输入验证码区分大小写" required="required" class="reg-input code" ng-model="Code">
 		</div>
 		<div class="form-group reg-form-group">
-			<input type="submit" id="regist" value="注册" class="btn btn_sub" ng-click="register(userName,password)">
+			<input type="submit" id="regist" value="注册" class="btn btn_sub" ng-click="register(userName,password)" >
 		</div>
 	</form>
 <script type="text/javascript">

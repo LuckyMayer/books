@@ -1,5 +1,6 @@
-app.controller("detailController",function($scope,$http,$routeParams){
+app.controller("detailController",function($scope,$http,$routeParams,sessionName){
 	var id=$routeParams.id;
+	var name=sessionName.get();
 
 	$http({
 		method: 'POST',
@@ -11,7 +12,19 @@ app.controller("detailController",function($scope,$http,$routeParams){
 	}).error(function() {
 		alert("something Wrong!!");
 	});
+	$scope.borrow=function(bookName) {
+		$http({
+			method:'POST',
+			url: '../php/bookBorrow.php',
+			data:{book:bookName,borrowName:name}
+		}).success(function(data){
+			console.log(data);
+			alert("借阅成功");
+		})
+		
+	}
 });
+
 app.controller("zanController",function($scope,$http){
 	var star_store=12;
 	$scope.support=function(bookID) {
@@ -44,6 +57,8 @@ app.controller("zanController",function($scope,$http){
 		else
 			return "fa fa-star-o";
 	}
+
+
 });
 
 app.controller("commentController",function($scope,$http,sessionName,$rootScope,$routeParams){
